@@ -22,7 +22,7 @@ export class ActivityComponent implements OnInit {
   totalRecords: any;
 
   initValues = {
-    title: 'Product Notes',
+    title: 'Product Notes Report',
     formDetails: [
       // {
       //   label: 'Mobile Number',
@@ -35,41 +35,7 @@ export class ActivityComponent implements OnInit {
       //   type: 'input'
       // },
       {
-        label: 'ARN Number',
-        controlName: 'arn',
-        type: 'select',
-        list:[
-          {
-            key: 'Corporate_Deck',
-            value: 'Corporate_Deck'
-          },
-          {
-            key: 'arn-909090',
-            value: 'arn-909090'
-          }
-        ]
-      },
-      {
-        label: 'Product Information',
-        controlName: 'info',
-        type: 'select',
-        list:[
-          {
-            key: 'One Pager',
-            value: 'One Pager '
-          },
-          {
-            key: 'Product Notes',
-            value: 'Product Notes'
-          },
-       
-        ]
-      },
-      {
-        // label: 'Waba Number',
-        // controlName: 'waba_no',
-        // type: 'input'
-        label: 'Branch',
+      label: 'Product Notes',
         controlName: 'info',
         type: 'select',
         list:[
@@ -81,71 +47,17 @@ export class ActivityComponent implements OnInit {
             key: 'Hybrid',
             value: 'Hybrid'
           },
-       
+        
         
         ]
-      },
-      {
-        label: 'Product Type',
-        controlName: 'mu',
-        type: 'select',
-        list:[
-          {
-            key: 'ELSS Kar Bachat Yojana - PDF',
-            value: 'ELSS Kar Bachat Yojana - PDF'
-          },
-          {
-            key: 'Multi Cap Badhat Yojana - PDF',
-            value: 'Multi Cap Badhat Yojana - PDF'
-          },
-          {
-            key: 'Mid Cap Unnati Yojana-PDF',
-            value: 'Mid Cap Unnati Yojana-PDF'
-          },
-          {
-            key: 'Rural and Consumption-PDF',
-            value: 'Rural and Consumption-PDF'
-          },
-          {
-            key: 'Large Cap Pragati Yojana-PDF',
-            value: 'Large Cap Pragati Yojana-PDF'
-          },
-          {
-            key: 'Top 250 Nivesh Yojanac-PDF',
-            value: 'Top 250 Nivesh Yojanac-PDF'
-          },
-          {
-            key: 'Focused Equity Yojana-PDF',
-            value: 'Focused Equity Yojana-PDF'
-          },
-          {
-            key: 'Flexi Cap Yojana-PDF',
-            value: 'Flexi Cap Yojana-PDF'
-          }
-        ]
-      },
-      {
-        label: 'File Name',
-        controlName: 'file',
-        type: 'select',
-        list:[
-          {
-            key: 'MMMF_Product_July_2022.pdf',
-            value: 'MMMF_Product_July_2022.pdf'
-          },
-          {
-            key: 'MMMF_Flexi_cap_July_2022.pdf',
-            value: 'MMMF_Flexi_cap_July_2022.pdf'
-          }
-        ]
-      },
+      }
       // {
       //   label: 'Name',
       //   controlName: 'userName',
       //   type: 'input'
       // }
     ],
-    header: ['SNo', "Created Date","Mobile Number","Profile Name","ARN Number","Product Info","Branch","Product Type","File name","File Download"], // table headers
+    header: ['SNo', "Created Date","Mobile Number","Profile Name","ARN Number","Product Info","Branch","Product Type","File name"], // table headers
   }
   customListDatas: {};
   appointmentRating: any;
@@ -204,7 +116,6 @@ export class ActivityComponent implements OnInit {
                 "created_at" : "2022-09-15T11:47:28Z",
                 "digital_factsheet" : "-",
                 "id" : "913",
-                "file_download":"YES/NO",
                 "latest_product_info" : "Product_Deck | One_Pagers",
                 "market_updates" : "-",
                 "marketing_material" : "Product_Info | Product_Info",
@@ -216,7 +127,6 @@ export class ActivityComponent implements OnInit {
                 "updated_at" : "2022-09-15T11:54:55Z",
                 "product_info":"prod_notes",
                 "branch": "Equity",
-                "Corporate Deck_File": "MMMF_Flexi_cap_July_2022.pdf",
                 "product_type":"ELSS Kar Bachat Yojana - PDF",
                 "url" : "MMMF_Product_Deck_July_2022.pdf | One_pager_MMMF_Flexi_cap_July_2022.pdf"
              },
@@ -237,9 +147,7 @@ export class ActivityComponent implements OnInit {
                 "updated_at" : "2022-09-15T11:32:57Z",
                 "product_info":"prod_notes",
                 "branch": "Equity",
-                "Corporate Deck_File": "MMMF_Product_July_2022.pdf",
                 "product_type":"Mid Cap Unnati Yojana-PDF",
-                "file_download":"YES/NO",
                 "url" : "-"
              },
              {
@@ -259,8 +167,6 @@ export class ActivityComponent implements OnInit {
                 "updated_at" : "2022-09-14T16:27:55Z",
                 "product_info":"prod_notes",
                 "branch": "Equity",
-                "file_download":"YES/NO",
-                "Corporate Deck_File": "MMMF_Flexi_cap_July_2022.pdf",
                 "product_type":"Large Cap Pragati Yojana-PDF",
                 "url" : "-"
              },
@@ -282,8 +188,6 @@ export class ActivityComponent implements OnInit {
                 "product_info":"prod_notes",
                 "branch": "Hybrid",
                 "product_type":"Equity Savings Yojana",
-                "Corporate Deck_File": "MMMF_Product_July_2022.pdf",
-                "file_download":"YES/NO",
                 "url" : "One_Pager_MMMF_Kar_Bachat__Yojana_July_2022.pdf"
              },
              {
@@ -304,8 +208,6 @@ export class ActivityComponent implements OnInit {
                 "product_info":"prod_notes",
                 "branch": "Hybrid",
                 "product_type":"Equity Nivesh Yojana",
-                "Corporate Deck_File": "MMMF_Product_July_2022.pdf",
-                "file_download":"YES/NO",
                 "url" : "One_pager_MMMF_Unnati_Yojana_July_2022.pdf | One_pager_MMMF_Flexi_cap_July_2022.pdf"
              },
              {
@@ -325,8 +227,6 @@ export class ActivityComponent implements OnInit {
                 "updated_at" : "2022-09-13T13:48:58Z",
                 "product_info":"prod_notes",
                 "branch": "Hybrid",
-                "file_download":"YES/NO",
-                "Corporate Deck_File": "MMMF_Product_July_2022.pdf",
                 "product_type":"Equity Nivesh Yojana",
                 "url" : "-"
              },
@@ -347,8 +247,6 @@ export class ActivityComponent implements OnInit {
                 "updated_at" : "2022-09-15T17:02:52Z",
                 "product_info":"prod_notes",
                 "branch": "Equity",
-                "file_download":"YES/NO",
-                "Corporate Deck_File": "MMMF_Flexi_cap_July_2022.pdf",
                 "product_type":"ELSS Kar Bachat Yojana - PDF",
                 "url" : "-"
              },
@@ -369,9 +267,8 @@ export class ActivityComponent implements OnInit {
                 "updated_at" : "2022-09-16T10:23:15Z",
                 "product_info":"Prod_notes",
                 "product_type":"Equity Savings Yojana",
-                "Corporate Deck_File": "MMMF_Flexi_cap_July_2022.pdf",
                 "branch": "Hybrid",
-                "file_download":"YES/NO",
+                
                 "url" : "-"
              }
       ];
@@ -388,7 +285,7 @@ export class ActivityComponent implements OnInit {
         appointment : false,
         data: this.visitorsList,
         // keys: ['SNo', "createdDate", "createdTime", 'mobileNumber', "waba_no", "isVisitorORBookedUser"],  // To get the data from key
-        keys: ['SNo', "created_at", 'mobile_number','profile_name', 'arn_number', "product_info","branch","product_type","Corporate Deck_File",'file_download'],  // To get the data from key
+        keys: ['SNo', "created_at", 'mobile_number','profile_name', 'arn_number', "product_info","branch","product_type","corporate_deck_file_name"],  // To get the data from key
       }
 
     } else {

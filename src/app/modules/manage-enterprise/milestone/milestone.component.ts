@@ -74,7 +74,7 @@ export class MilestoneComponent implements OnInit {
       // },
     ],
     // header: ['SNo', "Created Date", 'Mobile Number', "URL",  "One Pager", "Digital Factsheet"]
-    header: ['SNo', "Created Date", "Mobile Number",'ARN Number',"Profile Name", "File Name","File Download"], 
+    header: ['SNo', "Created Date", "Mobile Number","Profile Name",'ARN Number', "URL"], 
   }
   customListDatas= {};
   
@@ -267,8 +267,7 @@ export class MilestoneComponent implements OnInit {
                 "profile_name" : "lalit maharshi",
                 "corporate_deck_file_name": "pdf",
                 "updated_at" : "2022-09-15T11:54:55Z",
-                "file_download":"YES/NO",
-                "url" : "Link"
+                "url" : "MMMF_Product_Deck_July_2022.pdf | One_pager_MMMF_Flexi_cap_July_2022.pdf"
              },
              {
           "SNo": "2",
@@ -285,7 +284,6 @@ export class MilestoneComponent implements OnInit {
                 "profile_name" : "-",
                 "corporate_deck_file_name": "pdf",
                 "updated_at" : "2022-09-15T11:32:57Z",
-                "file_download":"YES/NO",
                 "url" : "-"
              },
              {
@@ -302,9 +300,8 @@ export class MilestoneComponent implements OnInit {
                 "product_notes" : "-",
                 "profile_name" : "-",
                 "corporate_deck_file_name": "pdf",
-                "file_download":"YES/NO",
                 "updated_at" : "2022-09-14T16:27:55Z",
-                "url" : "Link"
+                "url" : "-"
              },
              {
           "SNo": "4",
@@ -321,8 +318,7 @@ export class MilestoneComponent implements OnInit {
                 "profile_name" : "Amit Teckchandani",
                 "corporate_deck_file_name": "pdf",
                 "updated_at" : "2022-09-13T14:25:27Z",
-                "file_download":"YES/NO",
-                "url" : "Link"
+                "url" : "One_Pager_MMMF_Kar_Bachat__Yojana_July_2022.pdf"
              },
              {
           "SNo": "5",
@@ -339,8 +335,7 @@ export class MilestoneComponent implements OnInit {
                 "profile_name" : "Amit Teckchandani",
                 "corporate_deck_file_name": "pdf",
                 "updated_at" : "2022-09-13T14:07:42Z",
-                "file_download":"YES/NO",
-                "url" : "Link"
+                "url" : "One_pager_MMMF_Unnati_Yojana_July_2022.pdf | One_pager_MMMF_Flexi_cap_July_2022.pdf"
              },
              {
           "SNo": "6",
@@ -356,7 +351,6 @@ export class MilestoneComponent implements OnInit {
                 "product_notes" : "-",
                 "profile_name" : "-",
                 "corporate_deck_file_name": "pdf",
-                "file_download":"YES/NO",
                 "updated_at" : "2022-09-13T13:48:58Z",
                 "url" : "-"
              },
@@ -374,9 +368,8 @@ export class MilestoneComponent implements OnInit {
                 "product_notes" : "-",
                 "profile_name" : "-",
                 "corporate_deck_file_name": "pdf",
-                "file_download":"YES/NO",
                 "updated_at" : "2022-09-15T17:02:52Z",
-                "url" : "Link"
+                "url" : "-"
              },
          {
           "SNo": "8",
@@ -392,9 +385,8 @@ export class MilestoneComponent implements OnInit {
                 "product_notes" : "-",
                 "profile_name" : "-",
                 "corporate_deck_file_name": "pdf",
-                "file_download":"YES/NO",
                 "updated_at" : "2022-09-16T10:23:15Z",
-                "url" : "Link"
+                "url" : "-"
              }
       ];
       this.totalRecords = processVariables?.totalItems;
@@ -406,7 +398,7 @@ export class MilestoneComponent implements OnInit {
         totalRecords: this.totalRecords,
         data: this.visitorsList,
         appointment : true,
-        keys: ['SNo', "created_at", 'mobile_number','arn_number', 'profile_name','url','file_download'],
+        keys: ['SNo', "created_at", 'mobile_number','profile_name','arn_number', 'url'],
         //Table header length should be equal to keys
       }
 

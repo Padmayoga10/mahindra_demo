@@ -167,8 +167,7 @@ export class CustomSelectComponent
     this.scrollEndEvent.emit()
     
   }
-  
-  onFilterChange(event){
-  console.log("filter",event.value)
-  }
 }
+
+
+
